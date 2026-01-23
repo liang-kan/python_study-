@@ -1,0 +1,12 @@
+{
+    "app_name": "PyCharm Demo",
+    "version": 2.0,
+    "features": [
+        "smart_code_completion",
+        "debugger"
+    ],
+    "database": {
+        "host": "127.0.0.1",
+        "port": 5432
+    }
+}
