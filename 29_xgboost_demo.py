@@ -24,7 +24,7 @@ def main():
     model = xgb.XGBRegressor(
         n_estimators=1000,
         learning_rate=0.05,
-        max_depth=3,
+        max_depth=8,
         early_stopping_rounds=10,  # 重要：如果连着 10 次效果没提升，就提前停止 (防止过拟合)
         n_jobs=-1
     )
