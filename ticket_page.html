@@ -1,0 +1,39 @@
+<!-- D:\python_study\ticket_page.html -->
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <title>模拟抢票现场</title>
+    <style>
+        body { text-align: center; padding-top: 100px; font-family: sans-serif; }
+        #buy_btn {
+            padding: 20px 50px;
+            font-size: 24px;
+            background-color: gray;
+            color: white;
+            border: none;
+            cursor: not-allowed;
+        }
+        #buy_btn.active {
+            background-color: red;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h1>周杰伦演唱会 - 模拟抢票</h1>
+    <h2 id="timer">请等待开售...</h2>
+    <!-- 按钮初始状态是 disabled (不可点) -->
+    <button id="buy_btn" disabled onclick="alert('🎉 抢票成功！你就是天选之子！')">未开售</button>
+
+    <script>
+        // 模拟倒计时，5秒后开售
+        setTimeout(function() {
+            document.getElementById("buy_btn").disabled = false;
+            document.getElementById("buy_btn").innerText = "立即购买";
+            document.getElementById("buy_btn").classList.add("active");
+            document.getElementById("timer").innerText = "🔥 火热开售中！";
+        }, 5000); // 5000毫秒 = 5秒
+    </script>
+</body>
+</html>

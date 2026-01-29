@@ -1,0 +1,21 @@
+<!-- D:\python_study\trap_page.html -->
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <title>Selenium 陷阱大闯关</title>
+</head>
+<body>
+    <h1>第一关：原生弹窗</h1>
+    <button id="alert_btn" onclick="alert('我是烦人的弹窗！不关掉我你啥也干不了！')">点击召唤弹窗</button>
+    <hr>
+
+    <h1>第二关：IFrame 嵌套</h1>
+    <!-- 这里嵌了一个画中画 -->
+    <iframe id="inner_frame" srcdoc="<button id='frame_btn'>我是 Frame 里的按钮，直接找是找不到我的！</button>" width="300" height="100" style="border: 2px solid red;"></iframe>
+    <hr>
+
+    <h1>第三关：新窗口跳转</h1>
+    <a id="new_tab_link" href="https://www.baidu.com" target="_blank">点击去百度（新标签页）</a>
+</body>
+</html>
